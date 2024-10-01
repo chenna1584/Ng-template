@@ -1,0 +1,11 @@
+<div *ngFor="let item of items">
+    <ng-container *ngIf="item.category === 'A'; else otherCategory">
+      <ng-template>
+        <h3 style="color: blue;">{{ item.name }} (Category A)</h3>
+      </ng-template>
+    </ng-container>
+    <ng-template #otherCategory>
+      <h3 style="color: green;">{{ item.name }} (Other Category)</h3>
+    </ng-template>
+  </div>
+  
